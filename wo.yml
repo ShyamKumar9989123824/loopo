@@ -4,11 +4,11 @@
    tasks:
    - name: Create directories yar
      file:
-       path: /tmp/"{{item}}"
-       state: directory
+      path: "{{ item }}"
+      state: directory
      with_items:
-        - prod
-        - dev
-        - staging
-        - preprod
-...
+      - /tmp/yogi
+      - /tmp/shyam
+      - /tmp/sai
+       
+       
