@@ -1,0 +1,14 @@
+---
+ - name: to create multiple directories
+   hosts: WEB
+   tasks:
+   - name: Create directories yar
+     file:
+       path: /tmp/"{{item}}"
+       state: directory
+     with_items:
+        - prod
+        - dev
+        - staging
+        - preprod
+...
